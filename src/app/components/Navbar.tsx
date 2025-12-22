@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Menu, X, Linkedin, Instagram, Twitter } from 'lucide-react';
 
-// Define variants outside so both the main component and sub-components can use them
+// Define variants outside
 const itemVariants: Variants = {
   initial: { opacity: 0, x: -15 },
   enter: { opacity: 1, x: 0 }
@@ -15,19 +15,18 @@ const navLinks = [
   { title: "Work", href: "#" },
   { title: "About", href: "#" },
   { title: "Pricing", href: "#" },
-//   { title: "FAQ", href: "#" },
   { title: "Contact", href: "#" },
 ];
 
-// Updated SocialIcon to be a motion component
-// This fixes the issue of passing variants to a component that couldn't handle them
+// Updated SocialIcon: Glassy border, Orange hover/active state
 const SocialIcon = ({ Icon }: { Icon: React.ElementType }) => (
   <motion.a 
     variants={itemVariants}
     href="#" 
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
-    className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:border-gray-400 transition-colors"
+    className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 
+    hover:border-orange-500 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-300"
   >
     <Icon size={18} strokeWidth={1.5} />
   </motion.a>
@@ -66,25 +65,27 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
-      <div className="max-w-7xl mx-auto flex justify-between items-start relative">
+      <div className="mx-auto flex justify-between items-start relative">
         
-        {/* Logo - Hanzo Pill */}
-        <div className="bg-white px-6 py-2.5 rounded-full shadow-sm z-50">
-          <span className="font-bold text-lg text-black tracking-tight">Emeka Victor</span>
+        {/* Logo - Glassy Pill */}
+        <div className="bg-white/70 backdrop-blur-md border border-white/20 px-6 py-2.5 rounded-full shadow-sm z-50">
+          <span className="text-lg text-black tracking-tight cursor-default hover:text-orange-500 transition-colors">
+            Emeka Victor
+          </span>
         </div>
 
         {/* Right Side Container */}
         <div className="relative z-50">
           
-          {/* Menu Toggle Button */}
+          {/* Menu Toggle Button - Glassy Circle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition-transform duration-200 ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`w-12 h-12 bg-white/70 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center shadow-sm hover:scale-105 hover:bg-white/90 transition-all duration-200 ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
           >
             <Menu size={24} color="black" strokeWidth={1.5} />
           </button>
 
-          {/* Dropdown Menu */}
+          {/* Dropdown Menu - Glassy Card */}
           <AnimatePresence>
             {isOpen && (
               <motion.div
@@ -92,15 +93,16 @@ export default function Navbar() {
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                className="absolute top-0 right-0 bg-white rounded-3xl shadow-2xl p-8 w-[300px] md:w-[320px] flex flex-col items-start origin-top-right"
+                // Added backdrop-blur, semi-transparent white, and subtle border
+                className="absolute top-0 right-0 bg-white/80 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-8 w-[300px] md:w-[320px] flex flex-col items-start origin-top-right"
               >
                 {/* Close Button Header */}
                 <div className="w-full flex justify-end mb-6">
                    <button
                     onClick={() => setIsOpen(false)}
-                    className="w-10 h-10 -mr-2 -mt-2 bg-transparent rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                    className="w-10 h-10 -mr-2 -mt-2 bg-transparent rounded-full flex items-center justify-center hover:bg-black/5 hover:text-orange-500 transition-colors"
                   >
-                    <X size={24} color="black" strokeWidth={1.5} />
+                    <X size={24} className="text-black hover:text-orange-500 transition-colors" strokeWidth={1.5} />
                   </button>
                 </div>
 
@@ -111,7 +113,8 @@ export default function Navbar() {
                       key={index}
                       variants={itemVariants}
                       href={link.href}
-                      className="text-xl font-medium text-gray-800 hover:text-gray-500 transition-colors"
+                      // Added hover:text-orange-500
+                      className="text-xl font-medium text-gray-800 hover:text-orange-500 active:text-orange-600 transition-colors duration-200"
                     >
                       {link.title}
                     </motion.a>
