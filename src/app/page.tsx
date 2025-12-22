@@ -6,6 +6,7 @@ import { ArrowDownRight, MoveRight } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Testimonials from "./components/testimonial";
+import ProjectSlider from "./components/ProjectSlider";
 
 const heroImages = [
   { 
@@ -84,7 +85,7 @@ export default function Home() {
 
 
         </div>
-
+        <ProjectSlider/>
         {/* 2. Minimalist Image Grid */}
         <div className="w-full">
           <div className="flex justify-between items-end mb-6">
