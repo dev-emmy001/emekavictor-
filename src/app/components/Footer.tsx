@@ -22,14 +22,14 @@ export default function Footer() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <footer className="w-full px-6 py-20 md:px-12 md:py-0 max-w-7xl mx-auto font-sans overflow-hidden">
+    <footer className="w-full px-6 py-20 md:px-8 md:py-0 mx-auto font-sans overflow-hidden">
       
       {/* 1. Main Typography CTA */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-24">
         <div className="max-w-3xl">
-          <h2 className="text-5xl md:text-8xl font-bold tracking-tighter text-gray-900 leading-[0.9]">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-900 leading-[0.9]">
             Let's create <br />
-            <span className="text-gray-300">something iconic.</span>
+            <span className="text-gray-500">something iconic.</span>
           </h2>
         </div>
 
@@ -37,11 +37,11 @@ export default function Footer() {
         <div className="relative group">
           {/* Colorful Blur Background - Appears on Hover */}
           <div 
-            className={`absolute inset-0 bg-gradient-to-r from-orange-400 via-emerald-400 to-blue-500 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 scale-110`} 
+            className={`absolute inset-0 bg-linear-to-r from-orange-400 via-emerald-400 to-blue-500 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 scale-110`} 
           />
           
           <motion.a
-            href="mailto:hello@emekavictor.com"
+            href="mailto:victoremeka.dev@outlook.com"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             whileHover={{ scale: 1.05 }}
@@ -73,17 +73,17 @@ export default function Footer() {
               Building digital experiences with focus on motion and usability.
             </p>
           </div> */}
-          <p className="text-gray-300 text-sm mt-8 md:mt-0">© 2025 All Rights Reserved.</p>
+          <p className="text-gray-500 text-sm mt-8 md:mt-0">© 2025 All Rights Reserved.</p>
         </div>
 
         {/* Col 2: Navigation Links */}
         <div className="md:col-span-4 flex flex-col gap-4">
-          <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Sitemap</span>
+          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Sitemap</span>
           {footerLinks.map((link, idx) => (
             <a 
               key={idx} 
               href={link.href}
-              className={`text-2xl md:text-3xl font-medium text-gray-300 transition-colors duration-300 ${link.color}`}
+              className={`text-2xl md:text-3xl font-medium text-gray-400 transition-colors duration-300 ${link.color}`}
             >
               {link.title}
             </a>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Menu, X, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Menu, X, Linkedin, Instagram, Twitter, Sparkle } from 'lucide-react';
 
 // Define variants outside
 const itemVariants: Variants = {
@@ -15,7 +15,7 @@ const navLinks = [
   { title: "Work", href: "#" },
   { title: "About", href: "#" },
   { title: "Pricing", href: "#" },
-  { title: "Contact", href: "#" },
+  { title: "Contact", href: "/contact" },
 ];
 
 // Updated SocialIcon: Glassy border, Orange hover/active state
@@ -69,7 +69,8 @@ export default function Navbar() {
         
         {/* Logo - Glassy Pill */}
         <div className="bg-white/70 backdrop-blur-md border border-white/20 px-6 py-2.5 rounded-full shadow-sm z-50">
-          <span className="text-lg text-black tracking-tight cursor-default hover:text-orange-500 transition-colors">
+          <span className="text-lg font-semibold text-black flex gap-2 tracking-tight cursor-default hover:text-orange-500 transition-colors">
+             <Sparkle/>
             Emeka Victor
           </span>
         </div>

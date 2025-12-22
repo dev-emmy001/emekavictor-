@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowDownRight, MoveRight } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Testimonials from "./components/testimonial";
 
 const heroImages = [
   { 
@@ -41,7 +42,7 @@ export default function Home() {
       <Navbar />
 
       {/* --- HERO SECTION START --- */}
-      <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full flex-grow flex flex-col justify-between">
+      <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full grow flex flex-col justify-between">
         
         {/* 1. Main Headline Area */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-20 md:mb-32">
@@ -101,43 +102,41 @@ export default function Home() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + (item.id * 0.1), duration: 0.5 }}
                       className={`
-                          relative rounded-3xl overflow-hidden cursor-pointer group bg-gray-100 border border-transparent hover:border-white/20 transition-all duration-500
+                          relative rounded-3xl overflow-hidden cursor-pointer group bg-gradient-to-b ${item.gradient} border border-transparent transition-all duration-500
                           ${hoveredProject !== null && hoveredProject !== item.id ? 'opacity-40 scale-95' : 'opacity-100 scale-100'}
                       `}
                   >
-                      {/* Default State: Grayscale / Minimal */}
-                      <div className="absolute inset-0 bg-gray-200 transition-colors duration-500 group-hover:bg-white" />
-                      
-                      {/* Hover State: Colorful Gradient Background */}
-                      <div className={`absolute inset-0 bg-linear-to-b ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                      {/* Glow Effect on Hover */}
+                      <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-500 rounded-3xl" />
                       
                       {/* Content */}
                       <div className="absolute inset-0 p-6 flex flex-col justify-between z-10">
                           {/* Top Number */}
                           <div className="flex justify-between items-start">
-                              <span className="text-sm font-bold text-gray-400 group-hover:text-white/80 transition-colors">
+                              <span className="text-sm font-bold text-white/60 group-hover:text-white transition-colors">
                                   0{item.id}
                               </span>
-                              <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                                   <MoveRight size={14} className="text-white" />
                               </div>
                           </div>
 
                           {/* Bottom Label */}
                           <div>
-                             <h3 className="text-2xl font-bold text-gray-300 group-hover:text-white transition-colors duration-300 translate-y-2 group-hover:translate-y-0">
+                             <h3 className="text-2xl font-bold text-white/80 group-hover:text-white transition-colors duration-300 translate-y-2 group-hover:translate-y-0">
                                   {item.label}
                              </h3>
                           </div>
                       </div>
 
                       {/* Simple geometric placeholder for image */}
-                      <div className="absolute right-[-20%] bottom-[-20%] w-48 h-48 bg-gray-300 rounded-full blur-2xl group-hover:bg-white/20 transition-all duration-500" />
+                      <div className="absolute right-[-20%] bottom-[-20%] w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:bg-white/30 transition-all duration-500" />
                   </motion.div>
               ))}
           </div>
         </div>
       </main>
+      <Testimonials/>
       {/* --- HERO SECTION END --- */}
 
       <Footer />
