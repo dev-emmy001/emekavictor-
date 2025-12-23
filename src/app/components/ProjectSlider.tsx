@@ -7,8 +7,8 @@ import { ArrowUpRight, MoveRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "Apex Fitness",
-    category: "Mobile App",
+    title: "openQuanta",
+    category: "Web Platform",
     theme: "orange",
     placeholderBg: "bg-neutral-200",
     hoverGradient: "from-orange-500/80 to-red-600/80"
@@ -46,7 +46,7 @@ export default function ProjectSlider() {
 
   return (
     <section className="py-20 bg-white overflow-hidden">
-      <div className="mx-auto md:px-8 mb-10 flex justify-between items-end">
+      <div className="mx-auto mb-10 flex justify-between items-end">
         <div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-gray-900 mb-2">
             Selected <span className="text-gray-500">Work.</span>
@@ -59,7 +59,7 @@ export default function ProjectSlider() {
 
       <div 
         ref={containerRef}
-        className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pl-6 md:pl-12 pb-12 scrollbar-hide"
+        className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pl-6 pb-12 scrollbar-hide"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project) => (
