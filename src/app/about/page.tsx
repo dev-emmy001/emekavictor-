@@ -10,25 +10,25 @@ import Image from "next/image";
 // Experience Data
 const experience = [
   {
-    year: "2024 — Present",
-    role: "Freelance Full Stack Dev",
-    company: "Self-Employed",
+    year: "2025 — Present",
+    role: "Lead Frontend  Dev",
+    company: "openQuanta",
     description:
-      "Building scalable web applications and high-fidelity prototypes for international clients. Specializing in Next.js and Supabase.",
+      "Built a scalable web3 application and high-fidelity prototype for openQuanta launch. Specializing in Next.js and integrating Solana.",
   },
   {
-    year: "2023 — 2024",
-    role: "UI/UX Designer",
-    company: "TechStudio",
+    year: "2025",
+    role: "Designer",
+    company: "VIHub/VAF",
     description:
-      "Led the design system overhaul for a major fintech product, improving user retention by 25%.",
+      "Led the design system overhaul for a tech hub, improving user retention by 25%.",
   },
   {
-    year: "2022 — 2023",
-    role: "Frontend Developer Intern",
-    company: "Creative Agency",
+    year: "2025",
+    role: "Founder",
+    company: "teamCobuild",
     description:
-      "Collaborated with senior devs to implement responsive designs and interactive animations using React.",
+      "A software company creating tools to solve community problems, starting from Aba.",
   },
 ];
 
@@ -110,14 +110,13 @@ export default function About() {
               </span>
             </div>
 
-            {/* UNCOMMENT FOR REAL IMAGE */}
-            <Image 
-                src="/profile.jpg" 
-                alt="Emeka Victor" 
-                fill 
-                className="object-cover z-30 grayscale group-hover:grayscale-0 transition-all duration-700"
-             /> 
-            
+         {/* profile image */}
+            <Image
+              src="/profile.jpg"
+              alt="Emeka Victor"
+              fill
+              className="object-cover z-30 grayscale group-hover:grayscale-0 transition-all duration-700"
+            />
           </motion.div>
 
           {/* Right: Text Content */}
@@ -137,23 +136,16 @@ export default function About() {
               className="space-y-6 text-xl md:text-2xl text-gray-500 leading-relaxed"
             >
               <p>
-                I'm Emeka Victor, a developer based in{" "}
-                <span className="text-gray-900 font-medium">Awka, Nigeria</span>
-                . My fascination with technology began not with code, but with
-                problem-solving.
-              </p>
-              <p>
-                I believe that great software is an intersection of logic and
-                creativity. It’s not enough for an app to work; it has to feel
-                right.
-              </p>
-              <p>
-                Over the past few years, I’ve transitioned from designing
-                interfaces to building the engines that power them. Today, I
-                leverage the full stack—from{" "}
-                <span className="text-gray-900 font-medium">Next.js</span> to{" "}
-                <span className="text-gray-900 font-medium">Supabase</span>—to
-                bring ambitious ideas to life.
+                My tech journey began in the media department of my local
+                church, upgrading systems and exploring graphic design. I spent
+                years obsessing over visuals in Photoshop before I wrote a
+                single line of code. This background gave me a unique edge when
+                I transitioned into engineering. As a graduate of the IGHub
+                Developers Fellowship, I don't just look at the code; I look at
+                the experience. I understand that a great application needs to
+                be functional and beautiful. My Stack: React, Next.js,
+                JavaScript, HTML/CSS. My Philosophy: Start with a vision, break
+                things if you have to, and don't stop until it works.
               </p>
             </motion.div>
 
@@ -173,7 +165,7 @@ export default function About() {
               Experience
             </h2>
             <span className="hidden md:block text-gray-400 text-sm font-medium">
-              (2022 — 2025)
+              {/* (2022 — 2025) */}
             </span>
           </div>
 

@@ -84,7 +84,7 @@ export default function Work() {
       <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full flex-grow">
         
         {/* --- HEADER --- */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-20 gap-8">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
