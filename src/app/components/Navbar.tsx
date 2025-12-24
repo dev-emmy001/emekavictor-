@@ -12,9 +12,9 @@ const itemVariants: Variants = {
 
 const navLinks = [
   { title: "Home", href: "/" },
-  { title: "Work", href: "#" },
-  { title: "About", href: "#" },
-  { title: "Pricing", href: "#" },
+  { title: "Work", href: "/works" },
+  { title: "About", href: "/about" },
+  { title: "Pricing", href: "/pricing" },
   { title: "Contact", href: "/contact" },
 ];
 

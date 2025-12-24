@@ -44,7 +44,7 @@ export default function Home() {
       <Navbar />
 
       {/* --- HERO SECTION START --- */}
-      <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full grow flex flex-col justify-between max-w-7xl">
+      <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full grow flex flex-col justify-between">
         
         {/* 1. Main Headline Area + Image Space */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-12 mb-20 md:mb-32">
