@@ -5,17 +5,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Twitter, Linkedin, Instagram, Github, ArrowUpRight } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Twitter, href: "#", color: "hover:text-blue-500", bg: "hover:bg-blue-50" },
-  { icon: Linkedin, href: "#", color: "hover:text-blue-700", bg: "hover:bg-blue-50" },
-  { icon: Instagram, href: "#", color: "hover:text-orange-500", bg: "hover:bg-orange-50" }, 
-  { icon: Github, href: "#", color: "hover:text-emerald-600", bg: "hover:bg-emerald-50" },
+  { icon: Twitter, href: "https://x.com/devemmy001_", color: "hover:text-blue-500", bg: "hover:bg-blue-50" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/victor-chukwuemeka-a70156310/", color: "hover:text-blue-700", bg: "hover:bg-blue-50" },
+  { icon: Instagram, href: "https://www.instagram.com/devemmy001_/", color: "hover:text-orange-500", bg: "hover:bg-orange-50" }, 
+  { icon: Github, href: "https://github.com/dev-emmy001", color: "hover:text-emerald-600", bg: "hover:bg-emerald-50" },
 ];
 
 const footerLinks = [
-  { title: "Home", href: "#", color: "hover:text-orange-500" },
-  { title: "Work", href: "#", color: "hover:text-emerald-500" },
-  { title: "About", href: "#", color: "hover:text-blue-500" },
-  { title: "Contact", href: "#", color: "hover:text-orange-500" },
+  { title: "Home", href: "/", color: "hover:text-orange-500" },
+  { title: "Work", href: "/works", color: "hover:text-emerald-500" },
+  { title: "About", href: "/about", color: "hover:text-blue-500" },
+  { title: "Contact", href: "/contact", color: "hover:text-orange-500" },
 ];
 
 export default function Footer() {
@@ -77,13 +77,13 @@ export default function Footer() {
         </div>
 
         {/* Col 2: Navigation Links */}
-        <div className="md:col-span-4 flex flex-col gap-4">
-          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Sitemap</span>
+        <div className="md:col-span-4 md:pb-12 flex flex-col gap-4">
+          <span className="text-sm font-semibold text-gray-600 uppercase mb-2">Sitemap</span>
           {footerLinks.map((link, idx) => (
             <a 
               key={idx} 
               href={link.href}
-              className={`text-2xl md:text-3xl font-medium text-gray-400 transition-colors duration-300 ${link.color}`}
+              className={`text-2xl md:text-3xl font-medium tracking-tighter text-gray-400 transition-colors duration-300 ${link.color}`}
             >
               {link.title}
             </a>

@@ -18,11 +18,13 @@ const navLinks = [
   { title: "Contact", href: "/contact" },
 ];
 
-// Updated SocialIcon: Glassy border, Orange hover/active state
-const SocialIcon = ({ Icon }: { Icon: React.ElementType }) => (
+// social links icons
+const SocialIcon = ({ Icon, href }: { Icon: React.ElementType; href: string }) => (
   <motion.a 
     variants={itemVariants}
-    href="#" 
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
     className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 
@@ -124,9 +126,9 @@ export default function Navbar() {
 
                 {/* Social Icons Footer */}
                 <div className="flex gap-3 mt-10">
-                  <SocialIcon Icon={Twitter} /> 
-                  <SocialIcon Icon={Linkedin} />
-                  <SocialIcon Icon={Instagram} />
+                  <SocialIcon Icon={Twitter} href="https://x.com/devemmy001_" /> 
+                  <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/victor-chukwuemeka-a70156310/" />
+                  <SocialIcon Icon={Instagram} href="https://www.instagram.com/devemmy001_/" />
                 </div>
 
               </motion.div>

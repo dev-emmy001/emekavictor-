@@ -7,8 +7,8 @@ import { Quote, Star, MoveLeft, MoveRight } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    role: "Product Lead at FinTech Co.",
+    name: "Dennis Kenneth",
+    role: "Founder at openQuanta.",
     text: "Emeka translated our complex financial data into a dashboard that isn't just functional, but actually enjoyable to use. His attention to detail is unmatched.",
     color: "group-hover:border-orange-500",
     text_color: "group-hover:text-orange-500",
@@ -109,7 +109,7 @@ export default function Testimonials() {
 
                 {/* Text */}
                 <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed mb-10">
-                  "{t.text}"
+                  {t.text}
                 </p>
 
                 {/* Footer / Author */}
