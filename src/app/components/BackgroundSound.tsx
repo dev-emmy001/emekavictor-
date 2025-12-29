@@ -11,7 +11,7 @@ export default function BackgroundSound() {
     const playAudio = () => {
       if (audioRef.current && !hasInteracted) {
         // set a low volume (30%) and attempt playback
-        audioRef.current.volume = 0.3;
+        audioRef.current.volume = 0.1;
         // ensure we don't loop; we'll schedule plays every 15s
         audioRef.current.loop = false;
         audioRef.current.currentTime = 0;
