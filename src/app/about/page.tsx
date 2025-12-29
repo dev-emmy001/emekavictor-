@@ -66,7 +66,12 @@ const education = [
     description:
       "Udemy.",
   },
-  
+    {
+    year: "2025",
+    role: "Cowrywise Ambassador",
+    description:
+      "Cowrywise.",
+  },
 ];
 // Philosophy/Values Data
 const values = [
@@ -273,8 +278,11 @@ export default function About() {
                     {item.description}
                   </p>
                 </div>
+                
               </motion.div>
+              
             ))}
+            <a className="p-5 border rounded-2xl border-gray-400" href="https://clover-citipati-df5.notion.site/Chukwumeka-Victor-229c04572bfa80e3af53d60d61cb121a?source=copy_link"><button>CV/Resume</button></a>
           </div>
         </div>
         {/* --- PHILOSOPHY GRID --- */}
