@@ -41,7 +41,7 @@ export default function Footer() {
           />
           
           <motion.a
-            href="mailto:victoremeka.dev@outlook.com"
+            href="https://wa.me/message/XTM2F325DHUSN1"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             whileHover={{ scale: 1.05 }}
