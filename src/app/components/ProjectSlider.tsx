@@ -11,31 +11,34 @@ const projects = [
     category: "Web Platform",
     theme: "orange",
     placeholderBg: "bg-neutral-200",
-    hoverGradient: "from-orange-500/80 to-red-600/80"
+    bg: "/images/openquanta.jpg",
   },
   {
     id: 2,
-    title: "EcoStream",
+    title: "teamCobuild",
     category: "Web Platform",
     theme: "emerald",
     placeholderBg: "bg-neutral-300",
-    hoverGradient: "from-emerald-500/80 to-teal-600/80"
+    hoverGradient: "from-emerald-500/80 to-teal-600/80",
+    bg: "/images/teamcobuild-.png",
   },
   {
     id: 3,
-    title: "Nexus Dash",
-    category: "Fintech UI",
+    title: "QwikHelp",
+    category: "Web App",
     theme: "blue",
     placeholderBg: "bg-neutral-200",
-    hoverGradient: "from-blue-500/80 to-indigo-600/80"
+    hoverGradient: "from-blue-500/80 to-indigo-600/80",
+    bg: "/images/qwikhelp.png",
   },
   {
     id: 4,
-    title: "Mono Arch",
-    category: "Branding",
+    title: "Constitui",
+    category: "Web App",
     theme: "gray",
     placeholderBg: "bg-neutral-300",
-    hoverGradient: "from-gray-700/80 to-black/90"
+    hoverGradient: "from-gray-700/80 to-black/90",
+    bg: "/images/constitui.png",
   },
 ];
 
@@ -71,13 +74,12 @@ export default function ProjectSlider() {
             {/* Reduced Card Dimensions */}
             <div className="w-[80vw] md:w-[480px] h-[400px] md:h-[550px] relative rounded-[2rem] overflow-hidden bg-gray-100 border border-gray-100">
               
-              {/* --- IMAGE PLACEHOLDER --- */}
-              <div className={`absolute inset-0 ${project.placeholderBg} transition-all duration-700 group-hover:scale-105`}>
-                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-${project.theme}-200 rounded-full blur-[100px] opacity-0 group-hover:opacity-40 transition-opacity duration-700`} />
-              </div>
-
-              {/* Hover Gradient Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${project.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              {/* --- IMAGE --- */}
+              <img 
+                src={project.bg} 
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+              />
               
               {/* Dark Gradient for Text Legibility */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />

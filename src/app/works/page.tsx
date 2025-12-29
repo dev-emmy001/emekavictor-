@@ -14,9 +14,9 @@ const categories = ["All", "Mobile App", "Web Dev", "UI/UX Design"];
 const projects = [
   {
     id: 1,
-    title: "Apex Fitness",
-    category: "Mobile App",
-    description: "A comprehensive workout tracking application with real-time analytics.",
+    title: "openQuanta",
+    category: "Web3 Platform",
+    description: "Here researchers publish without intermediaries, control their work, secure authorship with NFTs and monetize in an open market.",
     theme: "orange",
     gradient: "from-orange-400 to-red-500",
     bg: "bg-orange-50",
