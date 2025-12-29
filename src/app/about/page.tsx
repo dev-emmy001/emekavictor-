@@ -143,8 +143,8 @@ export default function About() {
                 I transitioned into engineering. As a graduate of the IGHub
                 Developers Fellowship, I don't just look at the code; I look at
                 the experience. I understand that a great application needs to
-                be functional and beautiful. My Stack: React, Next.js,
-                JavaScript, HTML/CSS. My Philosophy: Start with a vision, break
+                be functional and beautiful. My Stack: ReactNative, Next.js,
+                JavaScript, Wordpress, Python, Rust!. My Philosophy: Start with a vision, break
                 things if you have to, and don't stop until it works.
               </p>
             </motion.div>

@@ -184,15 +184,7 @@ export default function ServicesPricing() {
             </motion.div>
           ))}
         </div>
-      <button
-        className={`
-                    w-full py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300
-                    bg-white border border-gray-200 text-gray-900
-                    group-hover:bg-black group-hover:text-white group-hover:border-transparent
-                `}
-      >
-        Inquire Now <ArrowUpRight size={16} />
-      </button>
+
         {/* --- BOTTOM SECTION --- */}
         <div className="mt-24 p-12 bg-gray-900 rounded-[3rem] text-center relative overflow-hidden">
           {/* Abstract Shapes */}
