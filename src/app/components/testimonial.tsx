@@ -94,7 +94,7 @@ export default function Testimonials() {
               <motion.div 
                 key={t.id}
                 className={`
-                  group min-w-[320px] md:min-w-[500px] p-8 md:p-12 rounded-[2rem] bg-gray-50 
+                  group min-w-[320px] md:min-w-[500px] p-8 md:p-12 rounded-[2rem] h-fit bg-gray-50 
                   border border-transparent transition-all duration-500 
                   ${t.color} hover:bg-white hover:shadow-2xl hover:shadow-gray-200/50
                 `}
@@ -108,7 +108,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Text */}
-                <p className="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed mb-10">
+                <p className="text-l md:text-xl font-medium text-gray-800 leading-relaxed mb-10">
                   {t.text}
                 </p>
 

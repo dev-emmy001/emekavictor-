@@ -16,7 +16,7 @@ const services = [
   {
     id: "branding",
     title: "Brand Identity",
-    price: "Starts at $1,200",
+    price: "Starts at N200,000",
     description:
       "A complete visual identity system to help your business stand out in a crowded market.",
     icon: Layers,
@@ -33,7 +33,7 @@ const services = [
   {
     id: "wordpress",
     title: "WordPress Development",
-    price: "Starts at $1,800",
+    price: "Starts at N250,000",
     description:
       "Custom, high-performance WordPress sites tailored to your specific business needs.",
     icon: Monitor,
@@ -50,7 +50,7 @@ const services = [
   {
     id: "contract",
     title: "Retainer & Contract",
-    price: "$50 / hour",
+    price: "N100,000 / Week",
     description:
       "Flexible engineering and design support for teams needing extra hands on deck.",
     icon: Briefcase,
@@ -82,7 +82,7 @@ export default function ServicesPricing() {
             className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6 text-gray-900"
           >
             Project based <br />
-            <span className="text-gray-300">solutions.</span>
+            <span className="text-gray-500">solutions.</span>
           </motion.h1>
           <p className="text-xl text-gray-500 max-w-xl">
             Tailored packages for specific needs. Whether you need a fresh look,

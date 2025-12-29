@@ -9,42 +9,46 @@ import Footer from "../components/Footer";
 const plans = [
   {
     id: "design",
-    name: "Design Sprint",
-    description: "Rapid, high-fidelity prototypes to validate your big idea.",
-    label: "Custom Scope",
+    name: "Digital Presence",
+    description: "Perfect for local businesses needing a modern website and brand identity.",
+    label: "N400k",
     features: [
-      "2-Week Turnaround",
-      "High-Fidelity Prototype",
-      "User Flow Mapping",
+      "Custom Landing Page Design (Wordpress)",
+      "Brand Style Guide",
+      "5 Free advert Flyers",
       "Figma Source Files",
-      "2 Revision Rounds",
+      "Domain & Hosting Setup",
+      "social media management by partnering team",
+      "Google Business Profile Setup",
     ],
     highlight: false,
   },
   {
     id: "dev",
-    name: "Full Build",
+    name: "MVP Build",
     description: "The complete engineering package. From zero to deployed.",
     label: "Cooking", // The user requested specific replacement
     features: [
-      "Next.js 14 Architecture",
-      "Supabase Backend",
-      "Stripe Payments",
-      "SEO & Analytics",
-      "30 Days Support",
+      "Product Strategy Workshop", //(handled by team partners)
+      "High-Fidelity UI/UX Design",
+      "Full-Stack Dev (React/Supabase)",
+      "Authentication & Database",
+      "Payment Integration",
+      "Admin Dashboard",
+      "30 Days Post-Launch Support",
     ],
     highlight: true, // The "Hot" plan
   },
   {
-    id: "retainer",
-    name: "Retainer",
+    id: "Custom Engineering",
+    name: "Custom Engineering",
     description: "Dedicated developer access for scaling teams.",
-    label: "Hourly / Monthly",
+    label: "",
     features: [
-      "20+ Hours / Month",
-      "Priority Slack Access",
-      "Same-Day Bug Fixes",
-      "Feature Implementation",
+      "System Architecture Design",
+      "Custom API Development",
+      "Third-party Integrations",
+      "Legacy System Migration",
       "Code Reviews",
     ],
     highlight: false,
@@ -77,10 +81,10 @@ export default function Pricing() {
             className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1] mb-6 text-gray-900"
           >
             Value based <br />
-            <span className="text-gray-400">development.</span>
+            <span className="text-gray-500">development.</span>
           </motion.h1>
           
-          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg md:text-xl tracking-tighter text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
             Every project is unique. I don't sell off-the-shelf products; I cook up custom solutions tailored to your specific appetite.
           </p>
         </div>
@@ -100,7 +104,7 @@ export default function Pricing() {
             >
               {/* "Cooking" Glow Effect for Highlighted Card */}
               {plan.highlight && (
-                <div className="absolute -inset-1 bg-gradient-to-b from-orange-500 to-red-600 rounded-[2.5rem] blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+                <div className="absolute -inset-1 opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
               )}
 
               <div 
@@ -189,7 +193,7 @@ export default function Pricing() {
         <div className="mt-20 text-center">
              <p className="text-gray-500 mb-6">Looking for specific one-off services?</p>
              <a
-                href="/services" 
+                href="/extrapricing" 
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 rounded-full font-bold transition-colors"
              >
                 View Service Menu <ArrowUpRight size={18} />

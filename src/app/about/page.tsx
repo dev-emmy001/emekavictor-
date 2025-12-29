@@ -30,8 +30,44 @@ const experience = [
     description:
       "A software company creating tools to solve community problems, starting from Aba.",
   },
+    {
+    year: "2025",
+    role: "Lead Designer",
+    company: "Blutech Innovations",
+      description:
+      "Collaborated on UI/UX designs for client projects, enhancing user engagement through intuitive interfaces.",
+  
+    },
+  
 ];
 
+const education = [
+  {
+    year: "2025 — Present",
+    role: "M.Eng Computer Engineering",
+    description:
+      "Nnamdi Azikiwe University, Nigeria.",
+  },
+  {
+    year: "2019 — 2025",
+    role: "Secondary Education",
+    description:
+      "Supreme Competence Academy - Oxford International School, Aba.",
+  },
+  {
+    year: "2025",
+    role: "Frontend Developer Certification",
+    description:
+      "Innovation Growth Hub, Aba.",
+  },
+  {
+    year: "2025",
+    role: "Javascript Certification",
+    description:
+      "Udemy.",
+  },
+  
+];
 // Philosophy/Values Data
 const values = [
   {
@@ -110,7 +146,7 @@ export default function About() {
               </span>
             </div>
 
-         {/* profile image */}
+            {/* profile image */}
             <Image
               src="/profile.jpg"
               alt="Emeka Victor"
@@ -144,14 +180,15 @@ export default function About() {
                 Developers Fellowship, I don't just look at the code; I look at
                 the experience. I understand that a great application needs to
                 be functional and beautiful. My Stack: ReactNative, Next.js,
-                JavaScript, Wordpress, Python, Rust!. My Philosophy: Start with a vision, break
-                things if you have to, and don't stop until it works.
+                JavaScript, Wordpress, Python, Rust!. My Philosophy: Start with
+                a vision, break things if you have to, and don't stop until it
+                works.
               </p>
             </motion.div>
 
             {/* Signature / Decorative Element */}
             <div className="mt-12 opacity-50">
-              <span className="font-serif italic text-4xl text-gray-300">
+              <span className="font-serif italic text-4xl text-gray-400">
                 Emeka V.
               </span>
             </div>
@@ -199,7 +236,47 @@ export default function About() {
             ))}
           </div>
         </div>
+        {/* --- Education TIMELINE --- */}
+        <div className="mb-32">
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Education
+            </h2>
+            <span className="hidden md:block text-gray-400 text-sm font-medium">
+              {/* (2022 — 2025) */}
+            </span>
+          </div>
 
+          <div className="space-y-8">
+            {education.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-100 hover:border-gray-300 transition-colors"
+              >
+                <div className="md:w-1/4 mb-2 md:mb-0">
+                  <span className="text-sm font-bold text-gray-400 group-hover:text-black transition-colors">
+                    {item.year}
+                  </span>
+                </div>
+                <div className="md:w-1/3 mb-4 md:mb-0">
+                  <h4 className="text-2xl font-bold text-gray-900">
+                    {item.role}
+                  </h4>
+                  {/* <span className="text-gray-500">{item.company}</span> */}
+                </div>
+                <div className="md:w-1/3">
+                  <p className="text-gray-500 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
         {/* --- PHILOSOPHY GRID --- */}
         <div>
           <div className="mb-16 max-w-2xl">
