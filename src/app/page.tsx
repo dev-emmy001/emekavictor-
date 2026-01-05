@@ -101,13 +101,12 @@ export default function Home() {
               <User size={64} strokeWidth={1} className="mb-4" />
               <span className="font-bold text-xl uppercase tracking-widest">Image Space</span>
             </div>
-
-            {/* --- UNCOMMENT THIS BLOCK WHEN YOUR FILE IS IN /public/images/profile.jpg --- */}
             
             <Image
               src="/profile.jpg"
               alt="Emeka Victor"
               fill
+              loading="eager"
               className="object-cover z-20 grayscale group-hover:grayscale-0 transition-all duration-500"
             />
            
@@ -115,7 +114,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* 2. Project Slider */}
         <ProjectSlider />
 
         {/* 3. Minimalist Image Grid (Skills) */}
@@ -168,7 +166,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* 4. Testimonials */}
+    
       <Testimonials />
 
       <Footer />

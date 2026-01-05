@@ -6,14 +6,6 @@ import { ArrowUpRight, MoveRight } from 'lucide-react';
 
 const projects = [
   {
-    id: 1,
-    title: "openQuanta",
-    category: "Web Platform",
-    theme: "orange",
-    placeholderBg: "bg-neutral-200",
-    bg: "/images/openquanta.jpg",
-  },
-  {
     id: 2,
     title: "teamCobuild",
     category: "Web Platform",
@@ -30,6 +22,14 @@ const projects = [
     placeholderBg: "bg-neutral-200",
     hoverGradient: "from-blue-500/80 to-indigo-600/80",
     bg: "/images/qwikhelp.png",
+  },
+  {
+    id: 1,
+    title: "openQuanta",
+    category: "Web Platform",
+    theme: "orange",
+    placeholderBg: "bg-neutral-200",
+    bg: "/images/openquanta.jpg",
   },
   {
     id: 4,
