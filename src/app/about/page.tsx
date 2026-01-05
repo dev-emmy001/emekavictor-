@@ -153,7 +153,7 @@ export default function About() {
 
             {/* profile image */}
             <Image
-              src="/profile.jpg"
+              src="/images/emeka.jpg"
               alt="Emeka Victor"
               fill
               className="object-cover z-30 grayscale group-hover:grayscale-0 transition-all duration-700"

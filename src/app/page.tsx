@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             
             <Image
-              src="/profile.jpg"
+              src="/images/emekavictor.png"
               alt="Emeka Victor"
               fill
               loading="eager"

@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import BackgroundSound from "./components/BackgroundSound";
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   display: "swap", // Improves loading performance
 });
 
-// 1. Set your actual domain here when you deploy (e.g., https://emekavictor.com)
+// 1. Set your actual domain here when you deploy
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL 
   ? `https://${process.env.NEXT_PUBLIC_BASE_URL}` 
   : "https://emekavictor.com.ng/";
@@ -21,6 +20,9 @@ export const metadata: Metadata = {
   title: {
     default: "Emeka Victor | Full Stack Developer",
     template: "%s | Emeka Victor",
+  },
+  icons: {
+    icon: "/emekavictor.png", 
   },
   
   // SEO: Description
@@ -73,7 +75,12 @@ const jsonLd = {
     "addressLocality": "Awka",
     "addressCountry": "Nigeria"
   },
-  "knowsAbout": ["Next.js", "React", "Supabase", "UI/UX Design"]
+  "knowsAbout": ["Next.js", "React", "Supabase", "UI/UX Design"],
+  "sameAs": [
+    "https://x.com/devemmy001_",
+    "https://github.com/dev-emmy001",
+    "https://www.linkedin.com/in/victor-chukwuemeka-a70156310/"
+  ]
 };
 
 export default function RootLayout({
