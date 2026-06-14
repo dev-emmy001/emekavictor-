@@ -65,7 +65,7 @@ export default function Home() {
             </motion.div>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-900">
+            <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-900">
               I'm Emeka Victor, <br />
               <span className="text-gray-500">Full Stack Developer.</span>
             </h1>

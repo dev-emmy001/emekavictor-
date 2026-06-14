@@ -21,6 +21,9 @@ const services = [
       "A complete visual identity system to help your business stand out in a crowded market.",
     icon: Layers,
     theme: "orange",
+    themeBg: "bg-orange-500",
+    themeText: "text-orange-600",
+    themeTextLight: "text-orange-500",
     deliverables: [
       "Logo Design (3 Concepts)",
       "Typography & Color Palette",
@@ -38,6 +41,9 @@ const services = [
       "Custom, high-performance WordPress sites tailored to your specific business needs.",
     icon: Monitor,
     theme: "emerald",
+    themeBg: "bg-emerald-500",
+    themeText: "text-emerald-500",
+    themeTextLight: "text-emerald-500",
     deliverables: [
       "Custom Theme Development",
       "Speed & SEO Optimization",
@@ -55,6 +61,9 @@ const services = [
       "Flexible engineering and design support for teams needing extra hands on deck.",
     icon: Briefcase,
     theme: "blue",
+    themeBg: "bg-blue-500",
+    themeText: "text-blue-500",
+    themeTextLight: "text-blue-500",
     deliverables: [
       "Frontend Engineering (React/Next.js)",
       "UI/UX Design Audits",
@@ -112,7 +121,7 @@ export default function ServicesPricing() {
                     className={`
                     w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-500
                     bg-white shadow-sm text-gray-900
-                    group-hover:bg-${service.theme}-500 group-hover:text-white
+                    group-hover:bg-white group-hover:text-white
                   `}
                   >
                     <service.icon size={24} strokeWidth={1.5} />
@@ -134,7 +143,7 @@ export default function ServicesPricing() {
                       Estimated Cost
                     </span>
                     <span
-                      className={`text-2xl md:text-3xl font-bold tracking-tight text-gray-900 group-hover:text-${service.theme}-600 transition-colors`}
+                      className={`text-2xl md:text-3xl font-bold tracking-tight text-gray-900 group-hover:text-orange-600 transition-colors`}
                     >
                       {service.price}
                     </span>
@@ -153,7 +162,7 @@ export default function ServicesPricing() {
                         >
                           <CheckCircle2
                             size={18}
-                            className={`shrink-0 mt-0.5 text-gray-300 group-hover:text-${service.theme}-500 transition-colors duration-300`}
+                            className={`shrink-0 mt-0.5 text-gray-300 group-hover:text-orange-500 transition-colors duration-300`}
                           />
                           <span>{item}</span>
                         </li>
@@ -176,7 +185,7 @@ export default function ServicesPricing() {
                 {/* Decorative Background Blob (Hidden by default, visible on hover) */}
                 <div
                   className={`
-                    absolute top-0 right-0 w-64 h-64 bg-${service.theme}-500 rounded-full blur-[100px] opacity-0 
+                    absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full blur-[100px] opacity-0 
                     group-hover:opacity-10 transition-opacity duration-700 pointer-events-none
                 `}
                 />

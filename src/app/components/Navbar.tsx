@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Menu, X, Linkedin, Instagram, Twitter, Sparkle } from 'lucide-react';
 
@@ -20,7 +21,7 @@ const navLinks = [
 
 // social links icons
 const SocialIcon = ({ Icon, href }: { Icon: React.ElementType; href: string }) => (
-  <motion.a 
+  <motion.a
     variants={itemVariants}
     href={href}
     target="_blank"
@@ -83,6 +84,9 @@ export default function Navbar() {
           {/* Menu Toggle Button - Glassy Circle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+            aria-controls="main-navigation"
             className={`w-12 h-12 bg-white/70 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center shadow-sm hover:scale-105 hover:bg-white/90 transition-all duration-200 ${isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
           >
             <Menu size={24} color="black" strokeWidth={1.5} />
@@ -110,17 +114,16 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigation Links */}
-                <div className="flex flex-col gap-5 w-full">
+                <div id="main-navigation" className="flex flex-col gap-5 w-full">
                   {navLinks.map((link, index) => (
-                    <motion.a
+                    <Link
                       key={index}
-                      variants={itemVariants}
                       href={link.href}
-                      // Added hover:text-orange-500
                       className="text-xl font-medium text-gray-800 hover:text-orange-500 active:text-orange-600 transition-colors duration-200"
+                      onClick={() => setIsOpen(false)}
                     >
                       {link.title}
-                    </motion.a>
+                    </Link>
                   ))}
                 </div>
 

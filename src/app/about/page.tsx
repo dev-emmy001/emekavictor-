@@ -144,12 +144,12 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
 
             {/* Placeholder Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-300 z-20">
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-300 z-20">
               <User size={64} strokeWidth={1} className="mb-4" />
               <span className="font-bold text-xl uppercase tracking-widest">
                 Portrait
               </span>
-            </div>
+            </div> */}
 
             {/* profile image */}
             <Image
