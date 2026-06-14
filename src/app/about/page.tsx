@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Code, PenTool, Globe, User } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 import Image from "next/image";
 
 // Experience Data
@@ -143,13 +144,7 @@ export default function About() {
             {/* Hover Reveal Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
 
-            {/* Placeholder Content */}
-            {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-300 z-20">
-              <User size={64} strokeWidth={1} className="mb-4" />
-              <span className="font-bold text-xl uppercase tracking-widest">
-                Portrait
-              </span>
-            </div> */}
+
 
             {/* profile image */}
             <Image
@@ -282,7 +277,7 @@ export default function About() {
               </motion.div>
               
             ))}
-            <a className="p-5 border rounded-2xl border-gray-400" href="https://clover-citipati-df5.notion.site/Chukwumeka-Victor-229c04572bfa80e3af53d60d61cb121a?source=copy_link"><button>CV/Resume</button></a>
+            <a href="https://clover-citipati-df5.notion.site/Chukwumeka-Victor-229c04572bfa80e3af53d60d61cb121a?source=copy_link"><Button variant="primary" className="px-6 py-3">CV/Resume</Button></a>
           </div>
         </div>
         {/* --- PHILOSOPHY GRID --- */}

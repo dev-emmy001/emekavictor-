@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Send, Loader2, LocateIcon } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 export default function Contact() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -117,9 +118,13 @@ export default function Contact() {
               )}
 
               <div className="pt-4">
-                <button disabled={loading} className="px-10 py-5 bg-black text-white rounded-full font-bold text-lg disabled:opacity-70">
-                   {loading ? 'Sending...' : 'Send Message'}
-                </button>
+                <Button
+                  disabled={loading}
+                  variant="primary"
+                  className="px-10 py-5 text-lg w-full"
+                >
+                  {loading ? 'Sending...' : 'Send Message'}
+                </Button>
               </div>
             </form>
           </motion.div>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import Button from './Button';
 import { Menu, X, Linkedin, Instagram, Twitter, Sparkle } from 'lucide-react';
 
 // Define variants outside

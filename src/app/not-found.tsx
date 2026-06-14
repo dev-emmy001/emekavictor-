@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Home } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import Button from "./components/Button";
 export default function NotFound() {
   return (
     <div className="bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
@@ -53,17 +53,18 @@ export default function NotFound() {
             {/* Buttons */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <Link href="/">
-                <button className="px-8 py-4 bg-black text-white rounded-full font-bold flex items-center gap-2 hover:bg-orange-500 transition-colors duration-300">
-                  <Home size={18} /> Back to Home
-                </button>
+                <Button variant="primary" icon={<Home size={18} />}>
+                  Back to Home
+                </Button>
               </Link>
               
-              <button 
+              <Button 
+                variant="outline"
                 onClick={() => window.history.back()}
-                className="px-8 py-4 bg-gray-100 text-gray-900 rounded-full font-bold flex items-center gap-2 hover:bg-gray-200 transition-colors duration-300"
+                icon={<ArrowLeft size={18} />}
               >
-                <ArrowLeft size={18} /> Go Back
-              </button>
+                Go Back
+              </Button>
             </div>
           </motion.div>
         </div>

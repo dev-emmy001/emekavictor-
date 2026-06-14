@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Image from "next/image";
-
+import Image from "next/image";import Button from "../components/Button";
 // Categories for the filter
 const categories = ["All", "Mobile App", "Web Dev", "UI/UX Design"];
 
@@ -105,19 +104,14 @@ export default function Work() {
              className="flex flex-wrap gap-2"
           >
             {categories.map((cat) => (
-              <button
+              <Button
                 key={cat}
+                variant={activeCategory === cat ? 'primary' : 'secondary'}
                 onClick={() => setActiveCategory(cat)}
-                className={`
-                  px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 border
-                  ${activeCategory === cat 
-                    ? "bg-black text-white border-black" 
-                    : "bg-white text-gray-500 border-gray-200 hover:border-gray-400"
-                  }
-                `}
+                className="px-4 py-2 text-sm"
               >
                 {cat}
-              </button>
+              </Button>
             ))}
           </motion.div>
         </div>

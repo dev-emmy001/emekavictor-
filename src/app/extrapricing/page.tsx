@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
+import Button from "../components/Button";
 
 const services = [
   {
@@ -172,15 +174,14 @@ export default function ServicesPricing() {
                 </div>
 
                 {/* 2. CTA Button */}
-                <button
-                  className={`
-                    w-full py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300
-                    bg-white border border-gray-200 text-gray-900
-                    group-hover:bg-black group-hover:text-white group-hover:border-transparent
-                `}
+                <Button
+                  variant="secondary"
+                  icon={<ArrowUpRight size={16} />}
+                  iconPosition="right"
+                  className="w-full py-4 text-sm group-hover:bg-black group-hover:text-white group-hover:border-transparent"
                 >
-                  Inquire Now <ArrowUpRight size={16} />
-                </button>
+                  Inquire Now
+                </Button>
 
                 {/* Decorative Background Blob (Hidden by default, visible on hover) */}
                 <div

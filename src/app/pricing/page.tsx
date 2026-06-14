@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Check, ArrowUpRight, Flame, Zap, ChefHat } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 const plans = [
   {
@@ -174,15 +175,14 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA */}
-                <button className={`
-                    w-full py-5 rounded-2xl font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300
-                    ${plan.highlight 
-                        ? "bg-white text-black hover:bg-orange-500 hover:text-white" 
-                        : "bg-black text-white hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/30"
-                    }
-                `}>
-                    Get a Quote <ArrowUpRight size={16} />
-                </button>
+                <Button
+                  variant={plan.highlight ? 'secondary' : 'primary'}
+                  icon={<ArrowUpRight size={16} />}
+                  iconPosition="right"
+                  className="w-full py-5 text-sm uppercase tracking-wider"
+                >
+                  Get a Quote
+                </Button>
 
               </div>
             </motion.div>
