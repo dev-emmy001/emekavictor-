@@ -67,7 +67,7 @@ export default function ProjectSlider() {
 
       <div 
         ref={containerRef}
-        className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pl-6 pb-12 scrollbar-hide"
+        className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-12 scrollbar-hide"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project) => (

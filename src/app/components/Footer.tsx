@@ -22,7 +22,7 @@ export default function Footer() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <footer className="w-full px-6 py-20 md:px-8 md:py-0 mx-auto font-sans overflow-hidden">
+    <footer className="px-6 py-20 md:px-8 md:py-0font-sans overflow-hidden md:mx-auto max-w-7xl w-full">
       
       {/* 1. Main Typography CTA */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-24">
@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* Col 3: Socials */}
         <div className="md:col-span-4 flex flex-col gap-4 md:items-end">
-           <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2 md:text-right">Socials</span>
+           <span className="text-sm font-semibold text-gray-400 uppercase tracking-tighter mb-2 md:text-right">Socials</span>
            <div className="flex gap-2">
             {socialLinks.map((social, idx) => (
               <a

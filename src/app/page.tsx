@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             
             <Image
-              src="/images/emekavictor.png"
+              src="/images/emeka-victor-profile-image.jpg"
               alt="Emeka Victor"
               fill
               loading="eager"
@@ -119,7 +119,7 @@ export default function Home() {
         {/* 3. Minimalist Image Grid (Skills) */}
         <div className="w-full mt-12 md:mt-20">
           <div className="flex justify-between items-end mb-6">
-            <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+            <span className="text-sm font-semibold text-gray-400 tracking-tighter">
               My Skills
             </span>
             <span className="text-sm font-semibold text-gray-400 hidden md:block">

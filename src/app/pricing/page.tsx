@@ -179,7 +179,7 @@ export default function Pricing() {
                   variant={plan.highlight ? 'secondary' : 'primary'}
                   icon={<ArrowUpRight size={16} />}
                   iconPosition="right"
-                  className="w-full py-5 text-sm uppercase tracking-wider"
+                  className="w-full py-5 text-sm uppercase tracking-tighter"
                 >
                   Get a Quote
                 </Button>

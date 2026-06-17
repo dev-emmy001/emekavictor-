@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Google_Sans } from "next/font/google";
 import "./globals.css";
 // Background audio feature removed for accessibility and UX
-const montserrat = Montserrat({
+const googleSans = Google_Sans({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-google-sans",
   display: "swap", // Improves loading performance
 });
 
@@ -90,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-sans antialiased`}>
+      <body className={`${googleSans.variable} font-sans antialiased`}>
         {/* Inject Structured Data for Google */}
         <script
           type="application/ld+json"

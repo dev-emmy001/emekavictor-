@@ -69,7 +69,7 @@ export default function Contact() {
                   <Mail size={20} className="text-gray-400 group-hover:text-orange-500" />
                 </div>
                 <div>
-                   <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Email</span>
+                   <span className="block text-xs font-bold text-gray-400 uppercase tracking-tighter mb-1">Email</span>
                   <a href="mailto:victoremeka.dev@outlook.com"> <span className="text-lg font-medium text-gray-900">victoremeka.dev@outlook.com</span></a>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function Contact() {
                   <LocateIcon size={20} className="text-gray-400 group-hover:text-orange-500" />
                 </div>
                 <div>
-                   <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Location</span>
+                   <span className="block text-xs font-bold text-gray-400 uppercase tracking-tighter mb-1">Location</span>
                   <a href="https://maps.app.goo.gl/tJTabK1ykZtMgUv6A"> <span className="text-lg font-medium text-gray-900">Awka, Nigeria</span></a>
                 </div>
               </div>
@@ -91,13 +91,13 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative group">
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-gray-400">Your Name</label>
+                  <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Your Name</label>
                   <input name="name" id="name" type="text" required 
                     className="w-full pb-4 bg-transparent border-b border-gray-200 text-xl font-medium outline-none focus:border-orange-500 transition-colors" 
                   />
                 </div>
                 <div className="relative group">
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-gray-400">Your Email</label>
+                  <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Your Email</label>
                   <input name="email" id="email" type="email" required 
                     className="w-full pb-4 bg-transparent border-b border-gray-200 text-xl font-medium outline-none focus:border-emerald-500 transition-colors" 
                   />
@@ -105,7 +105,7 @@ export default function Contact() {
               </div>
 
               <div className="relative">
-                <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-gray-400">Message</label>
+                <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Message</label>
                 <textarea name="message" id="message" rows={4} required 
                   className="w-full bg-transparent border-b border-gray-200 text-xl font-medium outline-none resize-none focus:border-blue-500 transition-colors" 
                 />

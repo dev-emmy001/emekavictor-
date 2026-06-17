@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Button from './Button';
-import { Menu, X, Linkedin, Instagram, Twitter, Sparkle } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Linkedin, Instagram, Twitter, MoonIcon } from 'lucide-react';
 
 // Define variants outside
 const itemVariants: Variants = {
@@ -68,14 +69,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 p-6 md:p-8">
+    <nav className="fixed top-0 left-0 md:mx-auto max-w-7xl w-full right-0 z-50 p-6 md:p-8">
       <div className="mx-auto flex justify-between items-start relative">
         
         {/* Logo - Glassy Pill */}
-        <div className="bg-white/70 backdrop-blur-md border border-white/20 px-6 py-2.5 rounded-full shadow-sm z-50">
-          <span className="text-lg font-semibold text-black flex gap-2 tracking-tight cursor-default hover:text-orange-500 transition-colors">
-             <Sparkle/>
-            Emeka Victor
+        <div className="bg-white/70 backdrop-blur-md border border-white/20 px-4 py-2.5 rounded-full shadow-sm z-50">
+          <span className="text-lg font-semibold text-black flex flex-row items-center gap-2 tracking-tight cursor-default hover:text-orange-500 transition-colors">
+             <Image src="/images/emekavictorprofileicon.png" width={40} height={20} alt="nav image icon" className='rounded-full'/>
+            Innov8or
           </span>
         </div>
 
@@ -133,6 +134,7 @@ export default function Navbar() {
                   <SocialIcon Icon={Twitter} href="https://x.com/devemmy001_" /> 
                   <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/victor-chukwuemeka-a70156310/" />
                   <SocialIcon Icon={Instagram} href="https://www.instagram.com/devemmy001_/" />
+                  <SocialIcon Icon={MoonIcon} href="https://darkmode.com" />
                 </div>
 
               </motion.div>
