@@ -24,49 +24,49 @@ const SKILLS: Skill[] = [
   {
     label: "Next.js",
     className:
-      "bg-gradient-to-b from-white via-gray-50 to-gray-300 text-black shadow-[0_6px_0_#a8a8a8,0_10px_24px_rgba(0,0,0,0.5),inset_0_2px_0_rgba(255,255,255,0.95)]",
+      "bg-gradient-to-b from-white via-gray-50 to-gray-300 text-black shadow-[0_6px_0_#a8a8a8,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.95)]",
     icon: Zap,
   },
   {
     label: "React Native",
     className:
-      "bg-gradient-to-b from-sky-300 via-sky-400 to-sky-600 text-white shadow-[0_6px_0_#0369a1,0_10px_24px_rgba(0,0,0,0.45),inset_0_2px_0_rgba(255,255,255,0.35)]",
+      "bg-gradient-to-b from-sky-300 via-sky-400 to-sky-600 text-white shadow-[0_6px_0_#0369a1,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.35)]",
     icon: Smartphone,
   },
   {
     label: "Expo",
     className:
-      "bg-gradient-to-b from-violet-400 via-violet-500 to-violet-700 text-white shadow-[0_6px_0_#5b21b6,0_10px_24px_rgba(0,0,0,0.45),inset_0_2px_0_rgba(255,255,255,0.3)]",
+      "bg-gradient-to-b from-violet-400 via-violet-500 to-violet-700 text-white shadow-[0_6px_0_#5b21b6,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.3)]",
     icon: Rocket,
   },
   {
     label: "Tailwind CSS",
     className:
-      "bg-gradient-to-b from-cyan-200 via-cyan-300 to-cyan-500 text-cyan-950 shadow-[0_6px_0_#0891b2,0_10px_24px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.55)]",
+      "bg-gradient-to-b from-cyan-200 via-cyan-300 to-cyan-500 text-cyan-950 shadow-[0_6px_0_#0891b2,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.55)]",
     icon: Wind,
   },
   {
     label: "TypeScript",
     className:
-      "bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 text-white shadow-[0_6px_0_#1e3a8a,0_10px_24px_rgba(0,0,0,0.45),inset_0_2px_0_rgba(255,255,255,0.3)]",
+      "bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 text-white shadow-[0_6px_0_#1e3a8a,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.3)]",
     icon: Code,
   },
   {
     label: "Supabase",
     className:
-      "bg-gradient-to-b from-emerald-300 via-emerald-400 to-emerald-600 text-emerald-950 shadow-[0_6px_0_#047857,0_10px_24px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
+      "bg-gradient-to-b from-emerald-300 via-emerald-400 to-emerald-600 text-emerald-950 shadow-[0_6px_0_#047857,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
     icon: Database,
   },
   {
     label: "Payload CMS",
     className:
-      "bg-gradient-to-b from-orange-300 via-orange-400 to-orange-600 text-orange-950 shadow-[0_6px_0_#c2410c,0_10px_24px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
+      "bg-gradient-to-b from-orange-300 via-orange-400 to-orange-600 text-orange-950 shadow-[0_6px_0_#c2410c,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
     icon: Layers,
   },
   {
     label: "Resend",
     className:
-      "bg-gradient-to-b from-pink-300 via-pink-400 to-pink-600 text-pink-950 shadow-[0_6px_0_#be185d,0_10px_24px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
+      "bg-gradient-to-b from-pink-300 via-pink-400 to-pink-600 text-pink-950 shadow-[0_6px_0_#be185d,0_8px_16px_rgba(0,0,0,0.4),inset_0_2px_0_rgba(255,255,255,0.45)]",
     icon: Mail,
   },
 ];
@@ -114,7 +114,10 @@ export default function PhysicsSkills() {
     const { Engine, World, Bodies, Body, Composite, Mouse, MouseConstraint } =
       Matter;
 
-    const engine = Engine.create({ gravity: { x: 0, y: 1.4 } });
+    const engine = Engine.create({ 
+      gravity: { x: 0, y: 1.4 },
+      enableSleeping: true 
+    });
     const world = engine.world;
 
     const getBounds = () => ({
@@ -186,6 +189,8 @@ export default function PhysicsSkills() {
 
     const matterMouse = mouse as Matter.Mouse & {
       mousewheel?: EventListener;
+      mousemove?: EventListener;
+      mouseup?: EventListener;
     };
 
     if (matterMouse.mousewheel) {
@@ -196,8 +201,17 @@ export default function PhysicsSkills() {
       );
     }
 
+    // Fix fast dragging on desktop when pointer leaves the capsule
+    const handleMouseMove = (e: Event) => matterMouse.mousemove?.(e);
+    const handleMouseUp = (e: Event) => matterMouse.mouseup?.(e);
+    
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("mouseup", handleMouseUp, { passive: true });
+
     const updateWalls = () => {
       const bounds = getBounds();
+      if (bounds.width === width && bounds.height === height) return;
+      
       width = bounds.width;
       height = bounds.height;
 
@@ -209,6 +223,8 @@ export default function PhysicsSkills() {
     const resizeObserver = new ResizeObserver(updateWalls);
     resizeObserver.observe(container);
 
+    const lastTransforms: string[] = new Array(SKILLS.length).fill("");
+
     const syncDom = () => {
       pillRefs.current.forEach((el, index) => {
         const body = bodies[index];
@@ -216,17 +232,30 @@ export default function PhysicsSkills() {
         if (!el || !size) return;
 
         if (!body) {
-          el.style.opacity = "0";
+          if (lastTransforms[index] !== "opacity: 0") {
+            el.style.opacity = "0";
+            lastTransforms[index] = "opacity: 0";
+          }
           return;
         }
 
-        el.style.opacity = "1";
+        if (el.style.opacity === "0") {
+          el.style.opacity = "1";
+        }
+        
         const { x, y } = body.position;
-        el.style.transform = `translate3d(${x - size.width / 2}px, ${y - size.height / 2}px, 0) rotate(${body.angle}rad)`;
+        const transform = `translate3d(${x - size.width / 2}px, ${y - size.height / 2}px, 0) rotate(${body.angle}rad)`;
+        
+        // Cache DOM updates to prevent layout thrashing
+        if (lastTransforms[index] !== transform) {
+          el.style.transform = transform;
+          lastTransforms[index] = transform;
+        }
       });
     };
 
     const loop = () => {
+      // Use fixed time step (60fps). Variable delta destroys constraint stability (causes jittery drag)
       Engine.update(engine, 1000 / 60);
       syncDom();
       rafRef.current = requestAnimationFrame(loop);
@@ -238,6 +267,8 @@ export default function PhysicsSkills() {
       spawnTimeouts.forEach(clearTimeout);
       cancelAnimationFrame(rafRef.current);
       resizeObserver.disconnect();
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
       Composite.clear(world, false, true);
       Engine.clear(engine);
     };

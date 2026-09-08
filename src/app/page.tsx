@@ -26,38 +26,48 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-10 inline-flex items-center gap-3 px-4 py-2 backdrop-blur-sm"
+              className="mb-10 inline-flex items-center gap-3 md:gap-4"
             >
-            <span className="font-medium text-lg md:text-xl text-gray-300">
-              Hey, I&apos;m Emeka
-            </span>
-            <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-          </motion.div>
+              <span className="font-medium text-3xl md:text-5xl text-gray-300">
+                Hey, I&apos;m
+              </span>
+              <div className="relative h-12 w-20 md:h-16 md:w-28 overflow-hidden rounded-full bg-gray-800">
+                <Image
+                  src="/images/emekavictor.png"
+                  alt="Emeka Profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <span className="font-medium text-3xl md:text-5xl text-gray-300">
+                Emeka
+              </span>
+            </motion.div>
 
-          {/* Massive headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center text-6xl sm:text-7xl md:text-[10vw] font-black uppercase leading-[0.85] tracking-tighter text-white"
-          >
-            FULL STACK
-            <br />
-            WEB &amp; MOBILE
-            <br />
-            DEVELOPER
-          </motion.h1>
+            {/* Massive headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center text-6xl sm:text-7xl md:text-[10vw] font-black uppercase leading-[0.85] tracking-tighter text-white"
+            >
+              FULL STACK
+              <br />
+              WEB &amp; MOBILE
+              <br />
+              DEVELOPER
+            </motion.h1>
 
-          {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-gray-500 md:mt-10 md:text-lg"
-          >
-            Currently designing complex B2B workflows and user-friendly mobile
-            apps.
-          </motion.p>
+            {/* Subtext */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-gray-500 md:mt-10 md:text-lg"
+            >
+              Currently designing complex B2B workflows and user-friendly mobile
+              apps.
+            </motion.p>
           </div>
         </section>
 
