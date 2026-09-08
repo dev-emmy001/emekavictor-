@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="pt-32 pb-20 px-6 md:px-12 mx-auto w-full flex-grow">
@@ -55,7 +55,7 @@ export default function Contact() {
           
           {/* Left Column (Info) */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-900">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-100">
               Let's start a <br />
               <span className="text-gray-500">project together.</span>
             </h1>
@@ -65,22 +65,22 @@ export default function Contact() {
             
             <div className="space-y-6">
               <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-orange-950/50 transition-colors">
                   <Mail size={20} className="text-gray-400 group-hover:text-orange-500" />
                 </div>
                 <div>
                    <span className="block text-xs font-bold text-gray-400 uppercase tracking-tighter mb-1">Email</span>
-                  <a href="mailto:victoremeka.dev@outlook.com"> <span className="text-lg font-medium text-gray-900">victoremeka.dev@outlook.com</span></a>
+                  <a href="mailto:victoremeka.dev@outlook.com"> <span className="text-lg font-medium text-gray-100">victoremeka.dev@outlook.com</span></a>
                 </div>
               </div>
               {/*  */}
               <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-orange-950/50 transition-colors">
                   <LocateIcon size={20} className="text-gray-400 group-hover:text-orange-500" />
                 </div>
                 <div>
                    <span className="block text-xs font-bold text-gray-400 uppercase tracking-tighter mb-1">Location</span>
-                  <a href="https://maps.app.goo.gl/tJTabK1ykZtMgUv6A"> <span className="text-lg font-medium text-gray-900">Awka, Nigeria</span></a>
+                  <a href="https://maps.app.goo.gl/tJTabK1ykZtMgUv6A"> <span className="text-lg font-medium text-gray-100">Awka, Nigeria</span></a>
                 </div>
               </div>
             </div>
@@ -93,13 +93,13 @@ export default function Contact() {
                 <div className="relative group">
                   <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Your Name</label>
                   <input name="name" id="name" type="text" required 
-                    className="w-full pb-4 bg-transparent border-b border-gray-200 text-xl font-medium outline-none focus:border-orange-500 transition-colors" 
+                    className="w-full pb-4 bg-transparent border-b border-gray-700 text-xl font-medium text-gray-100 outline-none focus:border-orange-500 transition-colors" 
                   />
                 </div>
                 <div className="relative group">
                   <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Your Email</label>
                   <input name="email" id="email" type="email" required 
-                    className="w-full pb-4 bg-transparent border-b border-gray-200 text-xl font-medium outline-none focus:border-emerald-500 transition-colors" 
+                    className="w-full pb-4 bg-transparent border-b border-gray-700 text-xl font-medium text-gray-100 outline-none focus:border-emerald-500 transition-colors" 
                   />
                 </div>
               </div>
@@ -107,12 +107,12 @@ export default function Contact() {
               <div className="relative">
                 <label className="block text-xs font-bold uppercase tracking-tighter mb-2 text-gray-400">Message</label>
                 <textarea name="message" id="message" rows={4} required 
-                  className="w-full bg-transparent border-b border-gray-200 text-xl font-medium outline-none resize-none focus:border-blue-500 transition-colors" 
+                  className="w-full bg-transparent border-b border-gray-700 text-xl font-medium text-gray-100 outline-none resize-none focus:border-blue-500 transition-colors" 
                 />
               </div>
 
               {status.message && (
-                <div className={`p-4 rounded-lg text-sm font-bold ${status.type === 'error' ? 'bg-red-50 text-red-500' : 'bg-green-50 text-green-600'}`}>
+                <div className={`p-4 rounded-lg text-sm font-bold ${status.type === 'error' ? 'bg-red-950/50 text-red-400' : 'bg-green-950/50 text-green-400'}`}>
                   {status.message}
                 </div>
               )}

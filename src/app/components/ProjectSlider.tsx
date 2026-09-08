@@ -53,10 +53,10 @@ export default function ProjectSlider() {
   const x = useTransform(scrollXProgress, [0, 1], ["0%", "-5%"]);
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 bg-gray-950 overflow-hidden">
       <div className="mx-auto mb-10 flex justify-between items-end">
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-gray-100 mb-2">
             Selected <span className="text-gray-500">Work.</span>
           </h2>
         </div>
@@ -77,7 +77,7 @@ export default function ProjectSlider() {
             style={{ x }}
           >
             {/* Reduced Card Dimensions */}
-              <div className="w-[80vw] md:w-[480px] h-[400px] md:h-[550px] relative rounded-[2rem] overflow-hidden bg-gray-100 border border-gray-100">
+              <div className="w-[80vw] md:w-[480px] h-[400px] md:h-[550px] relative rounded-[2rem] overflow-hidden bg-gray-900 border border-gray-800">
                
               {/* --- IMAGE --- */}
               <div className="absolute inset-0 w-full h-full">

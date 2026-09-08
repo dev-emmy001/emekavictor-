@@ -60,7 +60,7 @@ export default function Pricing() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
-    <div className="bg-white min-h-screen flex flex-col font-sans selection:bg-orange-500 selection:text-white">
+    <div className="bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="pt-32 pb-20 px-6 md:px-12 mx-auto w-full flex-grow max-w-7xl">
@@ -70,7 +70,7 @@ export default function Pricing() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-gray-100"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-gray-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-gray-800"
           >
             <ChefHat size={14} strokeWidth={2} />
             Tailored Solutions
@@ -79,7 +79,7 @@ export default function Pricing() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1] mb-6 text-gray-900"
+            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1] mb-6 text-gray-100"
           >
             Value based <br />
             <span className="text-gray-500">development.</span>
@@ -113,7 +113,7 @@ export default function Pricing() {
                   relative h-full flex flex-col justify-between p-8 md:p-10 rounded-[2rem] border transition-all duration-500
                   ${plan.highlight 
                     ? "bg-gray-900 text-white border-transparent" 
-                    : "bg-gray-50 text-gray-900 border-gray-100 hover:bg-white hover:shadow-2xl hover:border-transparent"
+                    : "bg-gray-900 text-gray-100 border-gray-800 hover:bg-gray-800 hover:shadow-2xl hover:shadow-black/50 hover:border-transparent"
                   }
                 `}
               >
@@ -122,7 +122,7 @@ export default function Pricing() {
                   <div className="flex justify-between items-start mb-8">
                     <div className={`
                       w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold transition-transform duration-500 group-hover:scale-110
-                      ${plan.highlight ? "bg-white/10 text-orange-400" : "bg-white text-gray-900 shadow-sm"}
+                      ${plan.highlight ? "bg-white/10 text-orange-400" : "bg-gray-800 text-gray-100 shadow-sm"}
                     `}>
                         {i + 1}
                     </div>
@@ -146,7 +146,7 @@ export default function Pricing() {
                     <span className={`text-4xl md:text-5xl font-bold tracking-tighter leading-none 
                         ${plan.highlight 
                             ? "text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500" 
-                            : "text-gray-900"
+                            : "text-gray-100"
                         }
                     `}>
                         {plan.label}
@@ -162,11 +162,11 @@ export default function Pricing() {
                         <div key={idx} className="flex items-center gap-4">
                             <div className={`
                                 p-1 rounded-full shrink-0
-                                ${plan.highlight ? "bg-orange-500/20 text-orange-400" : "bg-gray-200 text-gray-600"}
+                                ${plan.highlight ? "bg-orange-500/20 text-orange-400" : "bg-gray-800 text-gray-400"}
                             `}>
                                 <Check size={12} strokeWidth={3} />
                             </div>
-                            <span className={`text-sm font-medium ${plan.highlight ? "text-gray-300" : "text-gray-600"}`}>
+                            <span className={`text-sm font-medium ${plan.highlight ? "text-gray-300" : "text-gray-400"}`}>
                                 {feature}
                             </span>
                         </div>
@@ -194,7 +194,7 @@ export default function Pricing() {
              <p className="text-gray-500 mb-6">Looking for specific one-off services?</p>
              <a
                 href="/extrapricing" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 rounded-full font-bold transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-gray-100 rounded-full font-bold transition-colors"
              >
                 View Service Menu <ArrowUpRight size={18} />
              </a>

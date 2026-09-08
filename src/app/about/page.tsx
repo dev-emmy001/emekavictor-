@@ -82,8 +82,8 @@ const values = [
     icon: Code,
     text: "Clean code is non-negotiable. I write maintainable, scalable software that stands the test of time.",
     color: "group-hover:text-orange-500",
-    bg: "group-hover:bg-orange-50",
-    border: "group-hover:border-orange-200",
+    bg: "group-hover:bg-orange-950/50",
+    border: "group-hover:border-orange-800",
   },
   {
     id: 2,
@@ -91,8 +91,8 @@ const values = [
     icon: PenTool,
     text: "Functionality needs form. I ensure every pixel serves a purpose and every interaction feels natural.",
     color: "group-hover:text-emerald-500",
-    bg: "group-hover:bg-emerald-50",
-    border: "group-hover:border-emerald-200",
+    bg: "group-hover:bg-emerald-950/50",
+    border: "group-hover:border-emerald-800",
   },
   {
     id: 3,
@@ -100,14 +100,14 @@ const values = [
     icon: Globe,
     text: "Speed is a feature. I optimize for core web vitals to ensure instant load times and smooth framerates.",
     color: "group-hover:text-blue-500",
-    bg: "group-hover:bg-blue-50",
-    border: "group-hover:border-blue-200",
+    bg: "group-hover:bg-blue-950/50",
+    border: "group-hover:border-blue-800",
   },
 ];
 
 export default function About() {
   return (
-    <div className="tracking-tighter bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full flex-grow">
@@ -117,7 +117,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-900"
+            className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-100"
           >
             More than just <br />
             <span className="text-gray-500">pixels & code.</span>
@@ -126,7 +126,7 @@ export default function About() {
             initial={{ width: 0 }} // Changed 'w' to 'width'
             animate={{ width: "100%" }} // Changed 'w' to 'width'
             transition={{ duration: 1, delay: 0.5 }}
-            className="h-px bg-gray-200 w-full max-w-xs md:max-w-md mt-8"
+            className="h-px bg-gray-800 w-full max-w-xs md:max-w-md mt-8"
           />
         </div>
 
@@ -137,9 +137,9 @@ export default function About() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative w-full aspect-[4/5] bg-gray-50 rounded-[2.5rem] overflow-hidden border border-gray-100 group"
+            className="relative w-full aspect-[4/5] bg-gray-900 rounded-[2.5rem] overflow-hidden border border-gray-800 group"
           >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-gray-100 to-gray-200 rounded-full blur-[80px] opacity-100 transition-opacity duration-700" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-gray-800 to-gray-900 rounded-full blur-[80px] opacity-100 transition-opacity duration-700" />
 
             {/* Hover Reveal Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
@@ -198,7 +198,7 @@ export default function About() {
         {/* --- EXPERIENCE TIMELINE --- */}
         <div className="mb-32">
           <div className="flex justify-between items-end mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-100">
               Experience
             </h2>
             <span className="hidden md:block text-gray-400 text-sm font-medium">
@@ -214,21 +214,21 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-100 hover:border-gray-300 transition-colors"
+                className="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-800 hover:border-gray-600 transition-colors"
               >
                 <div className="md:w-1/4 mb-2 md:mb-0">
-                  <span className="text-sm font-bold text-gray-400 group-hover:text-black transition-colors">
+                  <span className="text-sm font-bold text-gray-500 group-hover:text-white transition-colors">
                     {item.year}
                   </span>
                 </div>
                 <div className="md:w-1/3 mb-4 md:mb-0">
-                  <h4 className="text-2xl font-bold text-gray-900">
+                  <h4 className="text-2xl font-bold text-gray-100">
                     {item.role}
                   </h4>
-                  <span className="text-gray-500">{item.company}</span>
+                  <span className="text-gray-400">{item.company}</span>
                 </div>
                 <div className="md:w-1/3">
-                  <p className="text-gray-500 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                  <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors">
                     {item.description}
                   </p>
                 </div>
@@ -239,7 +239,7 @@ export default function About() {
         {/* --- Education TIMELINE --- */}
         <div className="mb-32">
           <div className="flex justify-between items-end mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-100">
               Education
             </h2>
             <span className="hidden md:block text-gray-400 text-sm font-medium">
@@ -255,21 +255,21 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-100 hover:border-gray-300 transition-colors"
+                className="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-800 hover:border-gray-600 transition-colors"
               >
                 <div className="md:w-1/4 mb-2 md:mb-0">
-                  <span className="text-sm font-bold text-gray-400 group-hover:text-black transition-colors">
+                  <span className="text-sm font-bold text-gray-500 group-hover:text-white transition-colors">
                     {item.year}
                   </span>
                 </div>
                 <div className="md:w-1/3 mb-4 md:mb-0">
-                  <h4 className="text-2xl font-bold text-gray-900">
+                  <h4 className="text-2xl font-bold text-gray-100">
                     {item.role}
                   </h4>
                   {/* <span className="text-gray-500">{item.company}</span> */}
                 </div>
                 <div className="md:w-1/3">
-                  <p className="text-gray-500 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                  <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors">
                     {item.description}
                   </p>
                 </div>
@@ -283,7 +283,7 @@ export default function About() {
         {/* --- PHILOSOPHY GRID --- */}
         <div>
           <div className="mb-16 max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-100 mb-6">
               My Approach
             </h2>
             <p className="text-xl text-gray-500">
@@ -301,19 +301,19 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`
-                            group p-10 rounded-[2rem] bg-gray-50 border border-transparent transition-all duration-300
-                            ${val.bg} ${val.border} hover:shadow-xl
+                            group p-10 rounded-[2rem] bg-gray-900 border border-gray-800 transition-all duration-300
+                            ${val.bg} ${val.border} hover:shadow-xl hover:shadow-black/30
                         `}
               >
                 <div
-                  className={`w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 shadow-sm transition-colors ${val.color}`}
+                  className={`w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center mb-8 shadow-sm transition-colors ${val.color}`}
                 >
                   <val.icon size={24} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-gray-100 mb-4">
                   {val.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed group-hover:text-gray-600 transition-colors">
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                   {val.text}
                 </p>
               </motion.div>

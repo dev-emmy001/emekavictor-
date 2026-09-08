@@ -18,7 +18,7 @@ const projects = [
     description: "Here researchers publish without intermediaries, control their work, secure authorship with NFTs and monetize in an open market.",
     theme: "orange",
     gradient: "from-orange-400 to-red-500",
-    bg: "bg-orange-50",
+    bg: "bg-orange-950/30",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const projects = [
     description: "Next.js platform for monitoring environmental data sensors.",
     theme: "emerald",
     gradient: "from-emerald-400 to-teal-500",
-    bg: "bg-emerald-50",
+    bg: "bg-emerald-950/30",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const projects = [
     description: "Complete design system and high-fidelity prototyping for a banking app.",
     theme: "blue",
     gradient: "from-blue-400 to-indigo-500",
-    bg: "bg-blue-50",
+    bg: "bg-blue-950/30",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const projects = [
     description: "Minimalist portfolio website for an award-winning architecture firm.",
     theme: "gray",
     gradient: "from-gray-700 to-black",
-    bg: "bg-gray-50",
+    bg: "bg-gray-900",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const projects = [
     description: "P2P payment integration with seamless Supabase backend.",
     theme: "indigo",
     gradient: "from-indigo-400 to-purple-500",
-    bg: "bg-indigo-50",
+    bg: "bg-indigo-950/30",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const projects = [
     description: "SaaS analytics dashboard focusing on data visualization.",
     theme: "teal",
     gradient: "from-teal-400 to-cyan-500",
-    bg: "bg-teal-50",
+    bg: "bg-teal-950/30",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function Work() {
   );
 
   return (
-    <div className="tracking-tighter bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full flex-grow">
@@ -89,7 +89,7 @@ export default function Work() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-6 text-gray-900"
+              className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.95] mb-6 text-gray-100"
             >
               Curated <br />
               <span className="text-gray-300">experiments.</span>
@@ -135,7 +135,7 @@ export default function Work() {
                 className="group cursor-pointer"
               >
                 {/* Image Container */}
-                <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden bg-gray-50 border border-gray-100 mb-6">
+                <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden bg-gray-900 border border-gray-800 mb-6">
                   
                   {/* 1. Abstract Placeholder Background (Visible when no image) */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`} />
@@ -145,7 +145,7 @@ export default function Work() {
 
                   {/* 3. Placeholder Text */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-gray-300 font-bold text-lg uppercase tracking-widest opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-gray-600 font-bold text-lg uppercase tracking-widest opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                         View Project
                       </span>
                   </div>
@@ -161,8 +161,8 @@ export default function Work() {
 
                   {/* Overlay for Arrow */}
                   <div className="absolute top-6 right-6 z-20">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm scale-0 group-hover:scale-100 transition-transform duration-300 ease-out">
-                        <ArrowUpRight size={20} className="text-black" />
+                    <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-sm scale-0 group-hover:scale-100 transition-transform duration-300 ease-out">
+                        <ArrowUpRight size={20} className="text-white" />
                     </div>
                   </div>
                 </div>
@@ -170,10 +170,10 @@ export default function Work() {
                 {/* Text Content */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-3xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
+                    <h3 className="text-3xl font-bold text-gray-100 group-hover:text-orange-500 transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <span className="text-xs font-bold uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-1 rounded-md">
+                    <span className="text-xs font-bold uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-1 rounded-md">
                       {project.category}
                     </span>
                   </div>
@@ -187,8 +187,8 @@ export default function Work() {
         </motion.div>
 
         {/* --- BOTTOM CTA --- */}
-        <div className="mt-32 pt-20 border-t border-gray-100 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Want to see more details?</h2>
+        <div className="mt-32 pt-20 border-t border-gray-800 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-6">Want to see more details?</h2>
             <p className="text-gray-500 mb-8 max-w-xl mx-auto">
                 I have detailed case studies available for specific projects upon request.
             </p>

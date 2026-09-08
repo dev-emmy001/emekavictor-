@@ -80,7 +80,7 @@ export default function ServicesPricing() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
-    <div className="tracking-tighter bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="pt-32 pb-20 px-6 md:px-8 mx-auto w-full flex-grow">
@@ -89,7 +89,7 @@ export default function ServicesPricing() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6 text-gray-900"
+            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6 text-gray-100"
           >
             Project based <br />
             <span className="text-gray-500">solutions.</span>
@@ -114,21 +114,21 @@ export default function ServicesPricing() {
               className="group relative h-full"
             >
               {/* Card Container */}
-              <div className="h-full bg-gray-50 rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-gray-100 transition-all duration-500 group-hover:bg-white group-hover:shadow-2xl group-hover:border-transparent">
+              <div className="h-full bg-gray-900 rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-gray-800 transition-all duration-500 group-hover:bg-gray-800 group-hover:shadow-2xl group-hover:shadow-black/50 group-hover:border-transparent">
                 {/* 1. Header Section */}
                 <div>
                   {/* Icon Bubble */}
                   <div
                     className={`
                     w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-500
-                    bg-white shadow-sm text-gray-900
-                    group-hover:bg-white group-hover:text-white
+                    bg-gray-800 shadow-sm text-gray-100
+                    group-hover:bg-gray-700 group-hover:text-white
                   `}
                   >
                     <service.icon size={24} strokeWidth={1.5} />
                   </div>
 
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-3xl font-bold text-gray-100 mb-2">
                     {service.title}
                   </h3>
                   <p className="text-gray-500 leading-relaxed mb-8 min-h-[3rem]">
@@ -136,7 +136,7 @@ export default function ServicesPricing() {
                   </p>
 
                   {/* Divider */}
-                  <div className="h-px w-full bg-gray-200 mb-8 group-hover:bg-gray-100 transition-colors" />
+                  <div className="h-px w-full bg-gray-800 mb-8 group-hover:bg-gray-700 transition-colors" />
 
                   {/* Price Tag */}
                   <div className="mb-8">
@@ -144,7 +144,7 @@ export default function ServicesPricing() {
                       Estimated Cost
                     </span>
                     <span
-                      className={`text-2xl md:text-3xl font-bold tracking-tight text-gray-900 group-hover:text-orange-600 transition-colors`}
+                      className={`text-2xl md:text-3xl font-bold tracking-tight text-gray-100 group-hover:text-orange-500 transition-colors`}
                     >
                       {service.price}
                     </span>
@@ -152,18 +152,18 @@ export default function ServicesPricing() {
 
                   {/* Deliverables List */}
                   <div className="mb-10">
-                    <span className="block text-sm font-bold text-gray-900 mb-4">
+                    <span className="block text-sm font-bold text-gray-100 mb-4">
                       What's included:
                     </span>
                     <ul className="space-y-3">
                       {service.deliverables.map((item, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-3 text-sm text-gray-600"
+                          className="flex items-start gap-3 text-sm text-gray-400"
                         >
                           <CheckCircle2
                             size={18}
-                            className={`shrink-0 mt-0.5 text-gray-300 group-hover:text-orange-500 transition-colors duration-300`}
+                            className={`shrink-0 mt-0.5 text-gray-600 group-hover:text-orange-500 transition-colors duration-300`}
                           />
                           <span>{item}</span>
                         </li>
@@ -177,7 +177,7 @@ export default function ServicesPricing() {
                   variant="secondary"
                   icon={<ArrowUpRight size={16} />}
                   iconPosition="right"
-                  className="w-full py-4 text-sm group-hover:bg-black group-hover:text-white group-hover:border-transparent"
+                  className="w-full py-4 text-sm group-hover:bg-white group-hover:text-black group-hover:border-transparent"
                 >
                   Inquire Now
                 </Button>

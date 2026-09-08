@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Google_Sans } from "next/font/google";
 import "./globals.css";
 // Background audio feature removed for accessibility and UX
-const googleSans = Google_Sans({
-  subsets: ["latin"],
-  variable: "--font-google-sans",
-  display: "swap", // Improves loading performance
-});
+  const googleSans = Google_Sans({
+    subsets: ["latin"],
+    variable: "--font-google-sans",
+    display: "swap", // Improves loading performance
+  });
 
 // 1. Set your actual domain here when you deploy
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL 
@@ -89,8 +89,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${googleSans.variable} font-sans antialiased`}>
+    <html lang="en" className="dark">
+      <body className={`${googleSans.variable} font-sans antialiased bg-background text-foreground`}>
         {/* Inject Structured Data for Google */}
         <script
           type="application/ld+json"

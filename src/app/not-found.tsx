@@ -8,13 +8,13 @@ import Footer from "./components/Footer";
 import Button from "./components/Button";
 export default function NotFound() {
   return (
-    <div className="bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       <main className="flex-grow flex items-center justify-center relative overflow-hidden px-6">
         
         {/* Background Decorative Blobs */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gray-50 rounded-full blur-[100px] -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gray-900 rounded-full blur-[100px] -z-10" />
         
         <div className="text-center max-w-4xl mx-auto">
           
@@ -25,7 +25,7 @@ export default function NotFound() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <h1 className="text-[12rem] mt-10 md:text-[20rem] font-bold leading-none tracking-tighter text-gray-900 select-none">
+            <h1 className="text-[12rem] mt-10 md:text-[20rem] font-bold leading-none tracking-tighter text-gray-100 select-none">
               404
             </h1>
             
@@ -42,7 +42,7 @@ export default function NotFound() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="relative -mt-4 md:-mt-12 z-10"
           >
-            <h2 className="text-2xl md:text-4xl tracking-tighter font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-4xl tracking-tighter font-bold text-gray-100 mb-6">
               You've wandered off the map.
             </h2>
             <p className="text-gray-500 text-lg mb-10 max-w-md mx-auto">

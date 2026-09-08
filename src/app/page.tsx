@@ -40,7 +40,7 @@ export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
-    <div className="tracking-tighter bg-white min-h-screen flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900">
+    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
       <Navbar />
 
       {/* --- HERO SECTION START --- */}
@@ -56,7 +56,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-50 border border-gray-100 mb-8"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-900 border border-gray-800 mb-8"
             >
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-sm font-medium text-gray-500">
@@ -65,7 +65,7 @@ export default function Home() {
             </motion.div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-900">
+            <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-[0.95] mb-8 text-gray-100">
               I'm Emeka Victor, <br />
               <span className="text-gray-500">Full Stack Developer.</span>
             </h1>
@@ -78,7 +78,7 @@ export default function Home() {
               className="text-xl md:text-2xl text-gray-500 max-w-2xl leading-relaxed"
             >
               Specializing in creating{" "}
-              <span className="relative inline-block group cursor-pointer text-gray-900 font-semibold transition-colors hover:text-orange-500">
+              <span className="relative inline-block group cursor-pointer text-gray-100 font-semibold transition-colors hover:text-orange-500">
                 user-friendly
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </span>{" "}
@@ -91,7 +91,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="relative w-full md:w-[350px] h-[350px] md:h-[450px] bg-gray-50 rounded-[2.5rem] overflow-hidden border border-gray-100 flex-shrink-0 group"
+            className="relative w-full md:w-[350px] h-[350px] md:h-[450px] bg-gray-900 rounded-[2.5rem] overflow-hidden border border-gray-800 flex-shrink-0 group"
           >
             {/* Abstract background blob (Only visible when image is missing or loading) */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-orange-200/30 via-emerald-200/30 to-blue-200/30 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0" />
