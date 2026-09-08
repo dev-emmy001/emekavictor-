@@ -11,16 +11,16 @@ import PhysicsSkills from "./components/PhysicsSkills";
 
 export default function Home() {
   return (
-    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100">
+    <div className="tracking-tighter bg-gray-950 min-h-screen flex flex-col font-sans selection:bg-orange-900/50 selection:text-orange-100 overflow-x-hidden">
       <Navbar />
 
       <main className="mx-auto w-full grow px-6 pb-20 pt-32 md:px-8">
         {/* --- HERO SECTION --- */}
-        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden text-center">
+        <section className="relative flex min-h-[85vh] flex-col items-center justify-center text-center pb-32 md:pb-48">
           {/* Physics layer — pills rain from the top of the hero */}
           <PhysicsSkills />
 
-          <div className="relative z-10 flex flex-col items-center px-2 pointer-events-none">
+          <div className="relative z-10 flex flex-col items-center px-2">
             {/* Intro pill */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center text-[12vw] font-black uppercase leading-[0.85] tracking-tighter text-white"
+            className="text-center text-6xl sm:text-7xl md:text-[10vw] font-black uppercase leading-[0.85] tracking-tighter text-white"
           >
             FULL STACK
             <br />

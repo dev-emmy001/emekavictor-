@@ -147,7 +147,8 @@ export default function PhysicsSkills() {
       const x =
         margin +
         Math.random() * Math.max(width - margin * 2, pillWidth);
-      const y = -(pillHeight / 2 + 40 + Math.random() * 280);
+      // Spawn far enough above so they fall from the top of the screen
+      const y = -(pillHeight / 2 + 200 + Math.random() * 280);
 
       const body = Bodies.rectangle(x, y, pillWidth, pillHeight, {
         chamfer: { radius: pillHeight / 2 },
@@ -182,7 +183,6 @@ export default function PhysicsSkills() {
     });
 
     World.add(world, mouseConstraint);
-    container.style.touchAction = "none";
 
     const matterMouse = mouse as Matter.Mouse & {
       mousewheel?: EventListener;
@@ -246,7 +246,7 @@ export default function PhysicsSkills() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 z-0 overflow-hidden"
+      className="absolute inset-0 z-0 pointer-events-none"
       aria-hidden
     >
       {SKILLS.map((skill, index) => {
@@ -258,7 +258,7 @@ export default function PhysicsSkills() {
             ref={(el) => {
               pillRefs.current[index] = el;
             }}
-            className={`absolute left-0 top-0 flex items-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-bold select-none will-change-transform ${skill.className}`}
+            className={`absolute left-0 top-0 flex items-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-bold select-none will-change-transform pointer-events-auto ${skill.className}`}
             style={{
               transformOrigin: "center center",
               opacity: 0,
