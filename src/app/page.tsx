@@ -15,13 +15,10 @@ export default function Home() {
       <Navbar />
 
       <main className="mx-auto w-full grow px-6 pb-20 pt-32 md:px-8">
-        {/* --- HERO SECTION --- */}
-        <section className="relative flex min-h-[85vh] flex-col items-center justify-center text-center pb-32 md:pb-48">
-          {/* Physics layer — pills rain from the top of the hero */}
+        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden text-center pb-32 md:pb-48">
           <PhysicsSkills />
 
           <div className="relative z-10 flex flex-col items-center px-2">
-            {/* Intro pill */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -33,7 +30,7 @@ export default function Home() {
               </span>
               <div className="relative h-12 w-20 md:h-16 md:w-28 overflow-hidden rounded-full bg-gray-800">
                 <Image
-                  src="/images/emekavictor.png"
+                  src="/images/e-victor.jpeg"
                   alt="Emeka Profile"
                   fill
                   className="object-cover"
@@ -44,7 +41,6 @@ export default function Home() {
               </span>
             </motion.div>
 
-            {/* Massive headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,7 +54,6 @@ export default function Home() {
               DEVELOPER
             </motion.h1>
 
-            {/* Subtext */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
